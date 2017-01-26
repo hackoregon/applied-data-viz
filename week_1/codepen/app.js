@@ -1,5 +1,5 @@
-const { Component, PropTypes } = React; // destructuring
-const ReactDOM                 = ReactDOM; // not necessary - just clarifying
+const { Component } = React; // destructuring
+const ReactDOM      = ReactDOM; // not necessary - just clarifying
 
 // some constants
 const INITIAL_STATE = { multiplier: 1, bars: [] };
@@ -40,14 +40,6 @@ const stateReducer = (state = INITIAL_STATE, action) => {
 
 // our component
 class BarGraph extends Component {
-
-    static propTypes = {
-      dispatch: React.PropTypes.func,
-      addData: React.PropTypes.func,
-      minusData: React.PropTypes.func,
-      addBar: React.PropTypes.func,
-      removeBar: React.PropTypes.func,
-    };
 
     state = stateReducer(undefined, {});
 
