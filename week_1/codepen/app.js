@@ -1,5 +1,5 @@
-const { Component } = React;
-const ReactDOM      = ReactDOM;
+const { Component, PropTypes } = React; // destructuring
+const ReactDOM                 = ReactDOM; // not necessary - just clarifying
 
 // some constants
 const INITIAL_STATE = { multiplier: 1, bars: [] };
@@ -30,13 +30,9 @@ const stateReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 bars: [...state.bars, createBar(state)],
             }
-        case REMOVE_BAR:{
-            const bars = state.bars.splice(0,1);
-            return {
-                ...state,
-                bars: state.bars,
-            }
-        }
+        case REMOVE_BAR:
+            state.bars.length && state.bars.splice(0,1);
+            return state;
         default:
             return state;
     }
@@ -51,7 +47,7 @@ class BarGraph extends Component {
       minusData: React.PropTypes.func,
       addBar: React.PropTypes.func,
       removeBar: React.PropTypes.func,
-    }
+    };
 
     state = stateReducer(undefined, {});
 
@@ -65,7 +61,7 @@ class BarGraph extends Component {
 
     addBar = () => this.dispatch({type: ADD_BAR});
 
-    removeBar = () => this.dispatch({type: REMOVE_BAR});
+    removeBar = () => this.dispatch({type: REMOVE_BAR, payload: (this.state.bars.length - 1)});
 
     renderBar(bar, index) {
       return (
