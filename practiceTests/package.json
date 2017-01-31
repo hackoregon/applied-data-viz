@@ -1,0 +1,34 @@
+{
+  "name": "practice-tests",
+  "version": "0.1.0",
+  "description": "small repo to practice tests",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src --color",
+    "test": "mocha --opts ./mocha.opts 'src/*.test.js'",
+    "test:watch": "npm run test -- --watch"
+  },
+  "keywords": [
+    "testing",
+    "mocha",
+    "chai",
+    "enzyme",
+    "redux",
+    "react"
+  ],
+  "author": "David Daniel <davidedaniel@gmail.com> (http://davidedaniel.github.io)",
+  "license": "MIT",
+  "dependencies": {
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "eslint": "^3.14.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
+    "mocha": "^3.2.0"
+  }
+}
