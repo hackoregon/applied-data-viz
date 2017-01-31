@@ -1,4 +1,4 @@
-const add = require('./index').add;
+import add from './index';
 
 describe('add function', () => {
   it('should add 2', () => {

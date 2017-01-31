@@ -1,9 +1,6 @@
-const FIRED = 'MYAPP/FIRED';
+export const FIRED = 'MYAPP/FIRED';
+export const SUCCESS = 'MYAPP/SUCCESS';
 
-// action creator
-const fired = payload => ({ type: FIRED, payload });
-
-module.exports = {
-  fired,
-  FIRED,
-};
+// action creators
+export const fired = payload => ({ type: FIRED, payload });
+export const success = payload => ({ type: SUCCESS, payload });
