@@ -28,3 +28,13 @@ export const campaignDetail = createSelector(
   appState,
   ({ campaign }) => campaign,
 )
+
+export const campaignTransactions = createSelector(
+  appState,
+  ({ transactionData }) => transactionData,
+)
+
+export const campaignSpending = createSelector(
+  appState,
+  ({ spendingData }) => spendingData,
+)
