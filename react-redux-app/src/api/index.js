@@ -1,10 +1,4 @@
-import {fetchLegislatorsByState, fetchLegislatorByCrpId} from './whofundsmeApi';
-import {fetchCampaignById, fetchTransactionsById, fetchSpendingById} from './btcApi';
-
-export const whofundsmeApi = {
-    fetchLegislatorsByState,
-    fetchLegislatorByCrpId
-}
+import { fetchCampaignById, fetchTransactionsById, fetchSpendingById } from './btcApi';
 
 export const btcApi = {
     fetchCampaignById,
